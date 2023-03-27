@@ -49,8 +49,8 @@ late TextEditingController connectiontypecontroller = TextEditingController(text
             children: [
               const SizedBox(height: 20,),
               editformfield(labeltext: 'Name Of The Product',controller: namecontroller,),
-             editformfield(labeltext: 'price',controller:pricecontroller ,),
-             editformfield(labeltext: 'Quantity',controller: quantitycontroller,),
+             editformfield(labeltext: 'price',controller:pricecontroller ,keyboardType: TextInputType.number,),
+             editformfield(labeltext: 'Quantity',controller: quantitycontroller,keyboardType: TextInputType.number),
               editformfield(labeltext: 'Description',controller: descriptioncontroller,),
               editformfield(labeltext: 'Connection Type',controller: connectiontypecontroller,),
                EditImageWidget(image: imagelist),
@@ -69,7 +69,7 @@ late TextEditingController connectiontypecontroller = TextEditingController(text
                      );
                      Get.back();
                 },
-                child: buttonedit())
+                child: const buttonedit())
 
               
             ],

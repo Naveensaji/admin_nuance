@@ -44,16 +44,19 @@ final String brand;
             addformfield(
             hintText: 'Price', 
             controller: pricecontroller,
+            keyboardType: TextInputType.number,
             width: 150),
             const SizedBox(width: 30,),
             addformfield(
             hintText: 'Quantity',
             controller: quantitycontroller,
+            keyboardType: TextInputType.number,
             width: 150),],),
             const SizedBox(height: 20,),
             addformfield(
             hintText: 'Description',
             controller: descriptioncontroller,
+            keyboardType: TextInputType.multiline,
             width: 320),
             const SizedBox(height: 20,),
             addformfield(

@@ -6,8 +6,10 @@ class editformfield extends StatelessWidget {
     required this.labeltext,
     required this.controller,
     Key? key,
+    this.keyboardType,
   }) : super(key: key);
 String labeltext;
+final TextInputType? keyboardType;
 TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -15,6 +17,7 @@ TextEditingController controller = TextEditingController();
       padding: const EdgeInsets.all(15.0),
       child: TextFormField(
         controller:controller ,
+        keyboardType: keyboardType,
         style: const TextStyle(
           color: Colors.white,
         ),
