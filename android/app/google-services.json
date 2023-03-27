@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "162787233729",
+    "project_id": "nuance-e7d34",
+    "storage_bucket": "nuance-e7d34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162787233729:android:cb04e1e250ee86bc67e940",
+        "android_client_info": {
+          "package_name": "com.example.nuance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162787233729-4ddlq92is4tg6rp1vsd41t62dtquc024.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh-QRQZWQDnDOZZKOSTEW9EF02H_SWl1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162787233729-4ddlq92is4tg6rp1vsd41t62dtquc024.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162787233729:android:f17dc7ac386d6db367e940",
+        "android_client_info": {
+          "package_name": "com.example.nuance_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162787233729-4ddlq92is4tg6rp1vsd41t62dtquc024.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCh-QRQZWQDnDOZZKOSTEW9EF02H_SWl1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162787233729-4ddlq92is4tg6rp1vsd41t62dtquc024.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
