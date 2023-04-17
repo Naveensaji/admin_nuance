@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:nuance_admin/functions/order/orderfuntion.dart';
@@ -9,11 +11,11 @@ class OrderScreen extends StatelessWidget {
   required this.email}) : super(key: key);
   final String email;
  
- final List<String>? orderId = [
-    '#010321', '#082823', '#082828',
-    "#023671", '#0828299', '#082822',
-    '#082821', '#082829', '#082825',
-  ];
+//  final List<String>? orderId = [
+//     '#010321', '#082823', '#082828',
+//     "#023671", '#0828299', '#082822',
+//     '#082821', '#082829', '#082825',
+//   ];
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +36,10 @@ class OrderScreen extends StatelessWidget {
                   .snapshots(),
           builder: (context, snapshot) {
             if(snapshot.hasData){
+              log('data has been colleec');
               return ListView.separated(
               separatorBuilder: (context, index) => const SizedBox(height: 10,),
-              itemCount: orderId!.length,
+              itemCount: snapshot.data!.docs.length,
               itemBuilder:(context, index) {
               QueryDocumentSnapshot documentSnapshot =snapshot.data!.docs[index];
                 return Padding(
@@ -45,13 +48,13 @@ class OrderScreen extends StatelessWidget {
                     width: 200,
                     height: 170,
                     decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.white),
+                      borderRadius: BorderRadius.circular(15),
+                      color: Colors.white),
                       child: Column(
                       children: [
                       Padding(
                             padding:
-                            const EdgeInsets.only(left: 40, right: 50),
+                            const EdgeInsets.only(left: 25, right: 50),
                             child: Row(
                             children: [
                             Container(
@@ -61,17 +64,17 @@ class OrderScreen extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(15),
                                       color: Colors.white),
                                       child: Image.network(
-                                      documentSnapshot['images'][0],
+                                      documentSnapshot['image'][0],
                                        fit: BoxFit.contain,
                                   ),
                                 ),
-                                const SizedBox(width: 20,),
+                                const SizedBox(width: 15,),
                                 Column(
                                       crossAxisAlignment:
                                       CrossAxisAlignment.start,
                                       children: [
-                                      Text('Order id : ${orderId![index]}'),
-                                      Text('${documentSnapshot['name']}'),
+                                     // Text('Order id : ${orderId![index]}'),
+                                      Text('${documentSnapshot['name']}',style: const TextStyle(overflow: TextOverflow.fade),),
                                       Text('${documentSnapshot['price']}'),
                                   ],
                                 ),

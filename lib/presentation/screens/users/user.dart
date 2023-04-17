@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nuance_admin/presentation/screens/order/orderscree.dart';
 
+
 class UsersPage extends StatelessWidget {
   const UsersPage({super.key});
 
@@ -27,9 +28,10 @@ class UsersPage extends StatelessWidget {
              QueryDocumentSnapshot documentSnapshot =  snapshot.data!.docs[index];
             return  ListTile(
             tileColor: Colors.black,
-            title:  Center(child: Text(documentSnapshot['email'],style: const TextStyle(color: Colors.white),)),
+            title:  Center(child: Text(documentSnapshot['email'],
+            style: const TextStyle(color: Colors.white),)),
             trailing: const Icon(Icons.email,color: Colors.grey,),
-            onTap: () => Get.to(()=>OrderScreen(email: documentSnapshot['email'],)),
+            onTap: () => Get.to(()=>OrderScreen(email: documentSnapshot['email'])),
           );
         }, 
         separatorBuilder: (context, index) {
