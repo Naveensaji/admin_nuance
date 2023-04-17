@@ -29,7 +29,7 @@ class UsersPage extends StatelessWidget {
             tileColor: Colors.black,
             title:  Center(child: Text(documentSnapshot['email'],style: const TextStyle(color: Colors.white),)),
             trailing: const Icon(Icons.email,color: Colors.grey,),
-            onTap: () => Get.to(()=>OrderScreen()),
+            onTap: () => Get.to(()=>OrderScreen(email: documentSnapshot['email'],)),
           );
         }, 
         separatorBuilder: (context, index) {

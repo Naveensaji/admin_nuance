@@ -66,8 +66,10 @@ class HomeScreen extends StatelessWidget {
                             'Product side'))),
               ),
               GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => OrderScreen())),
+                // onTap: () => Navigator.of(context).push(
+                //     // MaterialPageRoute(builder: (context) => OrderScreen(email:,)
+                //     // )
+                //     ),
                 child: Container(
                     height: 200,
                     margin: const EdgeInsets.all(30),
